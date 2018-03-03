@@ -1,11 +1,13 @@
 #goal definition
 #the lines with the hash signs are merely comments
 #goal, result and feedback are defined by this fixed order, and separated by 3 hyphens
-int32 input
+#information needed to calculate the movement of the robot
+float64[] x_vals
+float64[] y_vals
+float64[] angle_vals
 ---
-#result definition
-int32 output
-int32 goal_stamp
+#result definition - is the robot done with the motion 0 is yes
+bool done
 ---
 #feedback
 int32 fdbk

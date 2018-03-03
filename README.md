@@ -2,23 +2,13 @@
 
 This example illustrates how to design an action server and an action client pair.
 
-The action server "my_action_server" implements a "simple" action server.  This example is documented in the document "Introduction to action servers and clients:  designing your own action server."
-
-The complementary "example_action_client" can work with any of the action servers.
-
+The action server "my_action_server" is based on wsnewman's "simple" action server.  This example is documented in the document "Introduction to action servers and clients:  designing your own action server."
 
 ## Example usage
-Start up roscore (or gazebo).  Execute:
+Run the following commands to use the STDR simulator in wsnewman's learning_ros
+`roslaunch stdr_launchers server_with_map_and_gui_plus_robot.launch` to start STDR,
+`rosrun my_action_server my_lidar_alarm` to start the lidar alarm,
 `rosrun my_action_server my_action_server` to start the server, and:
-`rosrun my_action_server example_action_client` to start the client.
-
-You can monitor the communications with:
-`rostopic echo example_action/goal`
-and
-`rostopic echo example_action/result`
+`rosrun my_action_server my_action_client` to start the client.
 
 
-## Running tests/demos
-Start the server and the client, in either order (though client will time out if you wait too long to start the server).  The display output should
-show that the client and server agree on how many requests have been serviced.  However, if you halt the client and restart it, the client service
-count will be out of sync with the server's service count.  For this demo, this mis-match causes the server to halt (for debug purposes only).

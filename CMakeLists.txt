@@ -9,8 +9,7 @@ catkin_simple()
 # Executables
 cs_add_executable(my_action_server src/my_action_server.cpp)
 cs_add_executable(my_action_client src/my_action_client.cpp)
-cs_add_executable(my_countdown_server src/my_action_server_w_fdbk.cpp)
-cs_add_executable(my_timer_client src/my_timer_client.cpp)
+cs_add_executable(my_lidar_alarm_ps2 src/my_lidar_alarm_ps2.cpp)
 cs_install()
 cs_export()
     
