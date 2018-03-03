@@ -23,7 +23,7 @@ const double g_move_speed = 1.0;
 const double g_spin_speed = .5236;
 const double g_sample_dt = .01;
 
-//global for velocity cmd
+//control the robot
 geometry_msgs::Twist g_twist_cmd;
 
 //publisher object to tell the robot how to move
